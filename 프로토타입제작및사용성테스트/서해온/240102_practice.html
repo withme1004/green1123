@@ -9,7 +9,7 @@
         outline: none;    
       }
       select{
-       width: 100%;
+        width: 100%;
         padding: 16px 20px;
         border: none;
         border-radius: 4px;
@@ -19,7 +19,9 @@
     </style>
   </head>
   <body>
-    <form action="http://localhost/login/php">
+    <form action="">
+      <fieldset>
+        <legend>회원가입</legend>
       <p>아 이 디 : 
         <input 
         type="text" 
@@ -102,13 +104,12 @@
         <p><input type="file"></p>
         <p><input type="button" value="전송"></p>
         <p><input type="image" src="images/menu1.jpg" alt="메뉴" hidden></p>
-        <fieldset>
+        </fieldset>
           <p>년월일 : <input type="date"></p>
           <p>날짜와 시간 : <input type="datetime-local"></p>
           <p>월 : <input type="month"></p>
           <p>주 : <input type="week"></p>
-          <p>시간 : <input type="time"></p>
-        </fieldset>
+          <p>시간 : <input type="time"></p>    
     </form>
   </body>
 </html>
