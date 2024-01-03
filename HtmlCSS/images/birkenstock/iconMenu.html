@@ -56,23 +56,22 @@
         position: relative;
         float: left;
         width: calc(100% / 3);
+        height: 333px;
         text-align: center;
         cursor: pointer;
       }
       ul#product li p {
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 394px;
-        height: 333px;
-        background: #000;
+        display: none;
+        position: relative;
+        top: -333px;
         color: #fff;
-        padding-top: 150px;
-        box-sizing: border-box;
       }
       ul#product li:hover p {
-        display: block;
+        display: table-cell;
+        width: 394px;
+        height: 333px;
+        background: rgba(0, 0, 0, 0.8);
+        vertical-align: middle;
       }
     </style>
   </head>
