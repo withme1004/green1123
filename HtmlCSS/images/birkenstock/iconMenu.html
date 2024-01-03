@@ -20,7 +20,7 @@
       ul#iconmenu {
         width: 837px;
         margin: 0 auto;
-        border: 1px solid;
+        /* border: 1px solid; */
         overflow: hidden;
       }
       ul#iconmenu li {
@@ -28,18 +28,23 @@
         float: left;
         width: calc(100% / 4);
         text-align: center;
+        cursor: pointer;
       }
       ul#iconmenu li p {
+        display: none;
         position: absolute;
-        left: 54px;
-        top: 5px;
-        width: 100px;
-        height: 100px;
+        left: 53px;
+        top: 1px;
+        width: 109px;
+        height: 109px;
         background: #fff;
         border: 1px solid #ccc;
         border-radius: 50%;
         line-height: 100px;
         text-transform: uppercase;
+      }
+      ul#iconmenu li:hover p {
+        display: block;
       }
     </style>
   </head>
@@ -60,6 +65,28 @@
       <li>
         <img src="images/icon4.png" alt="icon4" />
         <p>services</p>
+      </li>
+    </ul>
+    <ul id="product">
+      <li>
+        <img src="images/sub1.png" alt="sub1" />
+        <p>
+          12018년 여름신상<br />
+          지금 바로 만나보세요!<br />
+          +
+        </p>
+      </li>
+      <li>
+        <img src="images/sub2.png" alt="sub2" />
+        <p>상품구매하기</p>
+      </li>
+      <li>
+        <img src="images/sub3.png" alt="sub3" />
+        <p>
+          이보다 더 'Cool'<br />
+          할수는 없다<br />
+          +
+        </p>
       </li>
     </ul>
   </body>
