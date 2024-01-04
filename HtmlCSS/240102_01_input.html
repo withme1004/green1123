@@ -17,6 +17,10 @@
         border-radius: 4px;
         background-color: #f1f1f1;
       }
+      textarea#tell {
+        width: 500px;
+        height: 500px;
+      }
     </style>
   </head>
   <body>
@@ -33,15 +37,12 @@
             placeholder="아이디를 입력해 주세요"
             onfocus="this.placeholder=''"
             required
+            autofocus
           />
         </p>
         <p>
           비밀번호 :
-          <input
-            type="password"
-            placeholder="비밀번호를 입력해 주세요"
-            pattern="*"
-          />
+          <input type="password" placeholder="비밀번호를 입력해 주세요" />
         </p>
         <p>검색 : <input type="search" /></p>
         <p>이메일 : <input type="email" /></p>
@@ -55,7 +56,8 @@
         </p>
         <p>color : <input type="color" /></p>
         <p>
-          number : <input type="number" value="1" size="5" max="10" min="1" />
+          number :
+          <input type="number" value="1" size="5" max="10" min="1" step="3" />
         </p>
         <p>range : <input type="range" max="10" min="1" /></p>
         <p>
@@ -89,13 +91,14 @@
         </p>
         <p>
           남기고싶은말 :
-          <textarea name="tell" id="tell" cols="30" rows="10"></textarea>
+          <!-- <textarea name="tell" id="tell" cols="30" rows="10"></textarea> -->
+          <textarea name="tell" id="tell"></textarea>
         </p>
         <p><input type="submit" /></p>
         <p><input type="reset" /></p>
-        <p><input type="file" /></p>
+        <p><input type="file" multiple /></p>
         <p><input type="button" value="전송" /></p>
-        <p><input type="image" src="images/menu1.jpg" alt="메뉴" hidden /></p>
+        <p><input type="image" src="images/menu1.jpg" alt="메뉴" /></p>
       </fieldset>
       <p>년월일 : <input type="date" /></p>
       <p>날짜와 시간 : <input type="datetime-local" /></p>

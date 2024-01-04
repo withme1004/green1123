@@ -8,7 +8,7 @@
     <style>
       /* input[type="text"] { */
       #photo {
-        display: none;
+        display: block;
       }
       label {
         cursor: pointer;
@@ -28,11 +28,15 @@
     </style>
   </head>
   <body>
-    <input type="checkbox" id="photo" />
-    <label for="photo">이미지</label>
-    <p>
-      <img src="images/photo1.jpg" alt="photo1" />
-      <span>photo1 이미지입니다.</span>
-    </p>
+    <div class="content">
+      <p class="title">제목입니다</p>
+      <input type="checkbox" id="photo" />
+      <label for="photo">이미지</label>
+      <p>
+        <img src="images/photo1.jpg" alt="photo1" />
+        <span>photo1 이미지입니다.</span>
+      </p>
+    </div>
+    <p class="title">제목입니다</p>
   </body>
 </html>
