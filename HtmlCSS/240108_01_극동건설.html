@@ -14,7 +14,8 @@
         list-style: none;
       }
       .prcenter {
-        width: 1280px;
+        width: 100%;
+        max-width: 1280px;
         height: 570px;
         margin: 100px auto;
       }
@@ -28,13 +29,18 @@
         width: 340px;
         height: 550px;
         float: left;
+        transition: all 0.5s;
+        cursor: pointer;
       }
       .prcenter > ul > li:first-child li:first-child {
-        background: url(images/pr_img1.jpg);
+        background: url(images/pr_img1.jpg) center/100% no-repeat;
         margin-top: -30px;
       }
       .prcenter > ul > li:first-child li:last-child {
-        background: url(images/pr_img2.jpg);
+        background: url(images/pr_img2.jpg) center/100% no-repeat;
+      }
+      .prcenter > ul > li:first-child li:hover {
+        background-size: 120%;
       }
       .prcenter > ul > li li .right > div {
         float: left;
@@ -126,6 +132,20 @@
       .prcenter > ul > li li .right > div:hover .line-left {
         transform: scaleY(1);
         transition: all 0.2s ease-in-out 0.6s;
+      }
+      @media screen and (max-width: 1279px) {
+        /*1279이하*/
+        .prcenter {
+          width: 1100px;
+        }
+        .prcenter > ul > li:first-child li:first-child {
+          margin-top: 0;
+        }
+        .prcenter > ul > li:first-child li {
+          float: none;
+          width: 500px;
+          height: 265px;
+        }
       }
     </style>
   </head>
