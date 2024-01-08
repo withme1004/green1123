@@ -5,6 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .prcenter {
+        width: 1280px;
+        height: 570px;
+        margin: 100px auto;
+      }
+      .prcenter > ul > li:first-child {
+        float: left;
+      }
+      .prcenter > ul > li:last-child {
+        float: right;
+      }
+      .prcenter > ul > li:first-child li {
+        width: 340px;
+        height: 550px;
+        float: left;
+      }
+      .prcenter > ul > li:first-child li:first-child {
+        background: url(images/pr_img1.jpg);
+      }
+      .prcenter > ul > li:first-child li:last-child {
+        background: url(images/pr_img2.jpg);
+      }
+      .prcenter > ul > li li .right > div {
+        float: left;
+        padding: 40px 30px;
+        background: #f0f0f0;
+      }
+      .prcenter > ul > li li .right > div:first-child {
+        margin-right: 20px;
+      }
+      .prcenter > ul > li li .right {
+        overflow: hidden;
+      }
+      .prcenter > ul > li li:first-child {
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="prcenter">
