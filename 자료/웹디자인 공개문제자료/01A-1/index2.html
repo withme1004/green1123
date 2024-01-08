@@ -64,18 +64,15 @@
         background: #fff;
         height: 0;
         overflow: hidden;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
         transition: height 0.5s;
       }
-      header > div.menu > ul:hover .sub {
+      header > div.menu > ul > li:hover .sub {
         height: 150px;
         border-bottom: 1px solid #333;
       }
-      header > div.menu > ul > li:first-child .sub {
-        border-left: 1px solid #333;
-      }
-      header > div.menu > ul > li:last-child .sub {
-        border-right: 1px solid #333;
-      }
+
       header > div.menu > ul > li .sub a {
         line-height: 30px;
         display: block;
