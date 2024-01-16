@@ -19,6 +19,12 @@
       }
       .info .desc {
         position: absolute;
+        left: 30px;
+        top: 40px;
+      }
+      .info .desc p:first-child {
+        font-size: 25px;
+        padding-bottom: 20px;
       }
       .info svg {
         position: absolute;
@@ -33,6 +39,18 @@
         fill: none;
         stroke: #000;
         stroke-width: 10px;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        transition: 1s;
+      }
+      .info svg:hover rect {
+        stroke-dashoffset: 0;
+      }
+      .info svg polyline {
+        transition: 0.5s;
+      }
+      .info svg:hover polyline {
+        transform: translateX(50px);
       }
     </style>
   </head>
@@ -45,6 +63,12 @@
       <svg>
         <g>
           <rect />
+          <polyline
+            points="40,250 120,250 100,230"
+            stroke="#000"
+            stroke-width="1"
+            fill="none"
+          />
         </g>
       </svg>
     </div>
