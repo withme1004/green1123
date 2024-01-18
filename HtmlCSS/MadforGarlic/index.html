@@ -28,6 +28,7 @@
       }
       .list > ul > li {
         position: relative;
+        overflow: hidden;
       }
       .list > ul > li .over {
         position: absolute;
@@ -52,7 +53,7 @@
         margin: 20px 0;
       }
       .list > ul > li .over a {
-        display: block;
+        display: inline-block;
         padding: 10px 20px;
         background: #fff;
         font-size: 14px;
@@ -72,6 +73,20 @@
       }
       .list > ul > li:hover .over span {
         opacity: 1;
+      }
+      .list > ul > li > img {
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover > img {
+        transform: scale(1.2);
+      }
+      .list > ul > li .inner {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .list > ul > li:hover .inner {
+        transform: translateY(-20px);
       }
     </style>
   </head>
