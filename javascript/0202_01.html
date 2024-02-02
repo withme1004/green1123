@@ -21,6 +21,9 @@
       p img.on {
         display: block;
       }
+      label.on {
+        color: red;
+      }
       label:hover {
         text-decoration: underline;
         cursor: pointer;
@@ -28,7 +31,7 @@
     </style>
   </head>
   <body>
-    <label for="one" class="on">photo1</label>
+    <label for="one">photo1</label>
     <label for="two">photo2</label>
     <label for="three">photo3</label>
     <label for="four">photo4</label>
@@ -43,15 +46,23 @@
       <img src="images/photo6.jpg" alt="photo6" />
     </p>
     <script>
+      function myfnc() {
+        menu.forEach(function (keys, items) {
+          keys.classList.remove("on");
+        });
+      }
+      document.getElementsByTagName("label")[0].classList.add("on");
       document.getElementsByTagName("img")[0].classList.add("on");
       let menu = document.querySelectorAll("label");
       let img = document.querySelectorAll("img");
       menu.forEach(function (keys, items) {
         keys.onclick = function () {
+          myfnc();
           console.log("items :" + items);
           img.forEach(function (key, item) {
             key.classList.remove("on");
           });
+          menu[items].classList.add("on");
           img[items].classList.add("on");
         };
       });
