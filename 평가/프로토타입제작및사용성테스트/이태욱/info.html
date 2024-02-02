@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style01.css" />
+  </head>
+  <body>
+    <div class="btn">
+      <button id="one">Better Food</button>
+      <button id="two">Better Life</button>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <h1>
+          롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다. 개발부터
+          출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+        </h1>
+        <ul class="img">
+          <li>
+            <img
+              src="images/1705364248_m0195789_20240116091728.jpg"
+              alt="images"
+            />
+          </li>
+          <li>
+            <img
+              src="images/1705365536_m0152669_20240116093856.jpg"
+              alt="images"
+            />
+          </li>
+          <li>
+            <img
+              src="images/1705365591_m0191524_20240116093951.jpg"
+              alt="images"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="wrap">
+        <h1>
+          최고의 R&D 역량으로 모두의 Better Life에 기여하겠습니다.
+          롯데중앙연구소의 주요 연구 성과를 소개합니다.
+        </h1>
+        <div class="slide">
+          <div class="text">
+            <h2>
+              국민 플레이버 바닐라, 열대우림동맹(RA) 인증으로 친환경까지 인증!
+            </h2>
+            <span
+              >바닐라는 모두가 사랑하는 ‘국민 플레이버‘의 대명사 입니다.
+              롯데중앙연구소는 1987년부터 바닐라 연구를 시작했으며, 1999년부터는
+              바닐라빈으로부터 ‘바닐라 추출물’을 직접 제조하고 제품에 적용해
+              고품질의 제품을 제공해왔습니다. 최근 롯데는 이 바닐라를 ‘친환경’에
+              접목해 고객에게 또 다른 가치를 제공하고 있습니다.</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.getElementById("one").onclick = function () {
+        document.getElementsByClassName("wrap")[0].style.display = "block";
+        document.getElementsByClassName("wrap")[1].style.display = "none";
+      };
+      document.getElementById("two").onclick = function () {
+        document.getElementsByClassName("wrap")[1].style.display = "";
+        document.getElementsByClassName("wrap")[0].style.display = "none";
+      };
+    </script>
+  </body>
+</html>
