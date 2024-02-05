@@ -1,87 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      .btn {
-        display: flex;
-      }
-      .btn p {
-        width: 25%;
-        line-height: 50px;
-        text-align: center;
-      }
-      .btn p.on {
-        color: #fff;
-      }
-      .con {
-        position: relative;
-      }
-      .con li {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        color: #fff;
-        /* display: none; */
-        text-align: center;
-        line-height: 300px;
-      }
-      .btn p:first-child {
-        background: red;
-      }
-      .btn p:nth-child(2) {
-        background: blue;
-      }
-      .btn p:nth-child(3) {
-        background: green;
-      }
-      .btn p:last-child {
-        background: yellow;
-      }
-    </style>
   </head>
-  <body>
-    <div class="btn">
-      <p>photo1</p>
-      <p>photo2</p>
-      <p>photo3</p>
-      <p>photo4</p>
-    </div>
-    <ul class="con">
-      <li><img src="images/photo1.jpg" alt="" /></li>
-    </ul>
-    <script>
-      document.querySelector(".btn p").classList.add("on");
-      let btn = document.querySelectorAll(".btn p");
-      let con = document.querySelector(".con li img");
-      function myfnc() {
-        btn.forEach(function (o, i) {
-          o.classList.remove("on");
-        });
-      }
-      btn.forEach(function (o, i) {
-        //console.log(o);
-        //console.log(i);
-
-        o.onclick = function () {
-          myfnc();
-          //console.log(o);
-          console.log(i);
-          btn[i].classList.add("on");
-          con.src = "images/photo" + [i + 1] + ".jpg";
-        };
-      });
-    </script>
-  </body>
+  <body></body>
 </html>
