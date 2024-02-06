@@ -35,9 +35,11 @@ section {
   background-position-y: 100%;
 }
 .head .menu {
-  width: 700px;
+  width: 800px;
   display: flex;
-  justify-content: space-between;
+}
+.head .menu li {
+  padding: 0 30px;
 }
 .head .menu li a {
   font-size: 20px;
