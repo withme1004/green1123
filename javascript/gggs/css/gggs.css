@@ -28,9 +28,11 @@ section {
   width: 180px;
   height: 50px;
   overflow: hidden;
+  background: url(../images/logo.svg) left 0%/100%;
+  transition: 0.5s;
 }
-.head .logo img {
-  width: 100%;
+.head .logo.on {
+  background-position-y: 100%;
 }
 .head .menu {
   width: 700px;
@@ -47,6 +49,7 @@ section {
   background: #fff;
   height: 0;
   overflow: hidden;
+  transition: 0.5s;
 }
 .lnb .sub {
   width: 1635px;
