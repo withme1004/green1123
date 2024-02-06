@@ -86,3 +86,39 @@ body {
 .head .logo_icon img {
   padding-left: 10px;
 }
+.lnb_wrap {
+  border-bottom: 1px solid transparent;
+}
+.lnb_wrap.on {
+  border-bottom: 1px solid #ccc;
+}
+.lnb_wrap .lnb {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 91px;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+.lnb_wrap .lnb .sub {
+  width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 20px;
+}
+.lnb_wrap .lnb .sub > ul {
+  width: 850px;
+  display: flex;
+  justify-content: space-between;
+}
+.lnb_wrap .lnb .sub > ul > li {
+  text-align: center;
+}
+.lnb_wrap .lnb .sub > ul > li a {
+  line-height: 40px;
+}
+.lnb_wrap .lnb .sub > ul > li a:hover {
+  color: #780997;
+}
