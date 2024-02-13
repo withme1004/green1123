@@ -14,11 +14,15 @@ gnb.forEach(function (value, index) {
   value.onmouseenter = function () {
     bg.style.background = "#fff";
     subUl.forEach(function (keys, item) {
-      let ht = subUl[index].offsetHeight + 120;
-      console.log(ht);
-      gnb[index].querySelector(".sub").style.height = ht + "px";
-      gnb[index].querySelector(".sub").classList.add("on");
-      bg.style.height = ht + "px";
+      try {
+        let ht = subUl[index].offsetHeight + 120;
+        console.log(ht);
+        gnb[index].querySelector(".sub").style.height = ht + "px";
+        gnb[index].querySelector(".sub").classList.add("on");
+        bg.style.height = ht + "px";
+      } catch (error) {
+        bg.style.height = 80 + "px";
+      }
     });
   };
   value.onmouseleave = function () {
@@ -34,7 +38,6 @@ gnb.forEach(function (value, index) {
   };
   bg.onmouseleave = function () {
     myfnc();
-
     gnb.forEach(function (value, index) {
       value.querySelector("a").classList.remove("on");
     });

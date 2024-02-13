@@ -33,7 +33,7 @@ header .head .top {
 header .head .top ul.menu {
   display: flex;
   width: 680px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 header .head .top ul.menu > li {
   position: relative;
@@ -41,6 +41,9 @@ header .head .top ul.menu > li {
   height: 100%;
   line-height: 80px;
   /* text-align: center; */
+  /* background: #ccc; */
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 header .head .top ul.menu > li > a {
   color: #fff;
@@ -74,4 +77,15 @@ header .head .top ul.menu > li:first-child .sub > ul {
 header .head .top ul.menu > li .sub > ul li {
   flex: 1;
   line-height: 40px;
+}
+header .head .top ul.menu > li .sub > ul li a:hover {
+  color: #e85400;
+}
+section {
+  height: 100vh;
+}
+section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
