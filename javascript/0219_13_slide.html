@@ -18,7 +18,7 @@
         width: 1000px;
         height: 300px;
         margin: 50px auto;
-        /* overflow: hidden; */
+        overflow: hidden;
       }
       #slideShow > ul {
         position: absolute;
@@ -97,6 +97,7 @@
       let prev = document.querySelector(".prev");
       let next = document.querySelector(".next");
       let slideCount = slide.length;
+      console.log(slideCount);
       let currentIdx = 0;
       dot[0].className += " on";
       let slidewidth = slideani.offsetWidth;
@@ -121,7 +122,24 @@
         slides.style.transition = "0.5s";
       }
       //showSlide(1);
-      next.onclick = function () {};
+      next.onclick = function () {
+        if (currentIdx <= slideCount - 1) {
+          slides.style.left = -(currentIdx + 2) * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === slideCount - 1) {
+          setTimeout(function () {
+            slides.style.left = -slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = -1;
+        }
+        currentIdx++;
+        for (let i = 0; i < slideCount; i++) {
+          dot[i].className = dot[i].className.replace(" on", "");
+        }
+        dot[currentIdx].className += " on";
+      };
     </script>
   </body>
 </html>
