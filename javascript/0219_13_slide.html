@@ -15,7 +15,7 @@
       }
       #slideShow {
         position: relative;
-        width: 1000px;
+        width: 1280px;
         height: 300px;
         margin: 50px auto;
         overflow: hidden;
@@ -25,11 +25,11 @@
         left: 0;
       }
       #slideShow .slides img {
-        width: 1000px;
+        width: 1280px;
         height: 300px;
         object-fit: cover;
       }
-      #slideShow .slides li:not(:last-child) {
+      #slideShow .slides li {
         float: left;
       }
       #slideShow .controller {
@@ -81,12 +81,12 @@
         <li class="next">&rang;</li>
       </ul>
       <ul class="page">
-        <li class="dot"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
     <script>
@@ -135,6 +135,41 @@
           currentIdx = -1;
         }
         currentIdx++;
+        for (let i = 0; i < slideCount; i++) {
+          dot[i].className = dot[i].className.replace(" on", "");
+        }
+        dot[currentIdx].className += " on";
+      };
+      dot.forEach(function (value, index) {
+        value.onclick = function () {
+          showSlide((currentIdx = index));
+        };
+      });
+      let interval = setInterval(function () {
+        next.onclick();
+      }, 1500);
+      slideani.onmouseenter = function () {
+        clearInterval(interval);
+      };
+      slideani.onmouseleave = function () {
+        interval = setInterval(function () {
+          next.onclick();
+        }, 1500);
+      };
+      prev.onclick = function () {
+        console.log(currentIdx);
+        if (currentIdx >= 0) {
+          slides.style.left = -currentIdx * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === 0) {
+          setTimeout(function () {
+            slides.style.left = -slideCount * slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = slideCount;
+        }
+        currentIdx--;
         for (let i = 0; i < slideCount; i++) {
           dot[i].className = dot[i].className.replace(" on", "");
         }
