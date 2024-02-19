@@ -99,7 +99,7 @@
       let slideCount = slide.length;
       console.log(slideCount);
       let currentIdx = 0;
-      dot[0].className += " on";
+      dot[0].className += "on";
       let slidewidth = slideani.offsetWidth;
       function makeClone() {
         let clone_first = slide[0].cloneNode(true);
@@ -115,9 +115,9 @@
       initfnc();
       function showSlide(n) {
         for (let i = 0; i < slideCount; i++) {
-          dot[i].className = dot[i].className.replace(" on", "");
+          dot[i].className = dot[i].className.replace("on", "");
         }
-        dot[n].className += " on";
+        dot[n].className += "on";
         slides.style.left = -(n + 1) * slidewidth + "px";
         slides.style.transition = "0.5s";
       }
@@ -136,9 +136,9 @@
         }
         currentIdx++;
         for (let i = 0; i < slideCount; i++) {
-          dot[i].className = dot[i].className.replace(" on", "");
+          dot[i].className = dot[i].className.replace("on", "");
         }
-        dot[currentIdx].className += " on";
+        dot[currentIdx].className += "on";
       };
       dot.forEach(function (value, index) {
         value.onclick = function () {
@@ -171,9 +171,9 @@
         }
         currentIdx--;
         for (let i = 0; i < slideCount; i++) {
-          dot[i].className = dot[i].className.replace(" on", "");
+          dot[i].className = dot[i].className.replace("on", "");
         }
-        dot[currentIdx].className += " on";
+        dot[currentIdx].className += "on";
       };
     </script>
   </body>
