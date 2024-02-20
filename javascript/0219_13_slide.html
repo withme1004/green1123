@@ -104,7 +104,7 @@
       function makeClone() {
         let clone_first = slide[0].cloneNode(true);
         slides.append(clone_first);
-        let clone_last = slide[5].cloneNode(true);
+        let clone_last = slide[slideCount - 1].cloneNode(true);
         slides.prepend(clone_last);
       }
       makeClone();
