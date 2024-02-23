@@ -42,7 +42,19 @@
       }
     </style>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script></script>
+    <script>
+      $(function () {
+        $("#tabs .contents > div:first-child").css("display", "block");
+        $("#tabs ul li").click(function () {
+          let i = $(this).index();
+          console.log(i);
+          $("#tabs .contents > div").css("display", "none");
+          $("#tabs .contents > div")
+            .eq(i)
+            .css({ display: "block", borderBottom: "none" });
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="tabs">
